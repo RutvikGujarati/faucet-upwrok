@@ -1,0 +1,4 @@
+[build]
+  command = "npm run start" # or "node server.js" if no package.json script
+  publish = "."
+  functions = "functions"

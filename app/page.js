@@ -25,7 +25,7 @@ export default function Home() {
 		}
 
 		try {
-			const response = await fetch('api/server', {
+			const response = await fetch('http://localhost:3001/api/claimGmeld', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({ address: address }),
@@ -50,6 +50,7 @@ export default function Home() {
 			setErrorMessage('Please enter a wallet address.');
 			return;
 		}
+
 
 		try {
 			const response = await fetch('http://localhost:3001/api/claimMeldefi', {

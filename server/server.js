@@ -1,3 +1,4 @@
+const serverless = require("serverless-http");
 const express = require('express');
 const { ethers } = require('ethers');
 const cors = require('cors');
@@ -77,6 +78,9 @@ app.post('/api/claimGmeld', async (req, res) => {
 	}
   });
 
-app.listen(3001, () => {
-  console.log('Faucet server running on port 3001');
+  const PORT = process.env.PORT || 3001; 
+app.listen(PORT, () => {
+  console.log(`Faucet server running on port ${PORT} `);
 });
+
+module.exports.handler = serverless(app);
