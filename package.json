@@ -1,5 +1,5 @@
 {
-  "name": "faucet-upwork",
+  "name": "meld-faucet",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,14 +9,22 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hcaptcha/react-hcaptcha": "^1.11.0",
+    "bootstrap": "^5.3.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "ethers": "^6.13.3",
     "express": "^4.21.0",
     "faucet-upwork": "file:",
+    "hcaptcha": "^0.2.0",
+    "meld-faucet": "file:",
     "next": "14.2.14",
     "react": "^18",
-    "react-dom": "^18"
+    "react-bootstrap": "^2.10.5",
+    "react-dom": "^18",
+    "react-google-recaptcha": "^3.1.0",
+    "serverless-http": "^3.2.0",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "eslint": "^8",
