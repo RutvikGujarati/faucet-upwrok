@@ -9,14 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hcaptcha/react-hcaptcha": "^1.11.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "ethers": "^6.13.3",
     "express": "^4.21.0",
     "faucet-upwork": "file:",
+    "hcaptcha": "^0.2.0",
     "next": "14.2.14",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-google-recaptcha": "^3.1.0",
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
     "eslint": "^8",
