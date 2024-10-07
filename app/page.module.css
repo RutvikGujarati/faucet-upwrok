@@ -2,18 +2,13 @@
 	--gray-rgb: 0, 0, 0;
 	--gray-alpha-200: rgba(var(--gray-rgb), 0.08);
 	--gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-	--button-primary-hover: #383838;
-	--button-secondary-hover: #f2f2f2;
-
-	display: grid;
-	grid-template-rows: 20px 1fr 20px;
-	align-items: center;
-	justify-items: center;
-	min-height: 100svh;
-	padding: 80px;
-	gap: 64px;
-	font-family: var(--font-geist-sans);
+	--button-primary: #4CAF50;
+	--button-primary-hover: #45a049;
+	--button-secondary: #008CBA;
+	--button-secondary-hover: #007bb5;
+	--background: #f9f9f9;
+	--foreground: #333;
+	background-color: #90ee90;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,150 +16,97 @@
 		--gray-rgb: 255, 255, 255;
 		--gray-alpha-200: rgba(var(--gray-rgb), 0.145);
 		--gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-		--button-primary-hover: #ccc;
-		--button-secondary-hover: #1a1a1a;
-	}
-}
-
-.main {
-	display: flex;
-	flex-direction: column;
-	gap: 32px;
-	grid-row-start: 2;
-}
-
-
-.main code {
-	font-family: inherit;
-	background: var(--gray-alpha-100);
-	padding: 2px 4px;
-	border-radius: 4px;
-	font-weight: 600;
-}
-
-.ctas {
-	display: flex;
-	gap: 16px;
-}
-
-.ctas a {
-	appearance: none;
-	border-radius: 128px;
-	height: 48px;
-	padding: 0 20px;
-	border: none;
-	border: 1px solid transparent;
-	transition: background 0.2s, color 0.2s, border-color 0.2s;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 16px;
-	line-height: 20px;
-	font-weight: 500;
-}
-
-a.primary {
-	background: var(--foreground);
-	color: var(--background);
-	gap: 8px;
-}
-
-a.secondary {
-	border-color: var(--gray-alpha-200);
-	min-width: 180px;
-}
-
-.footer {
-	grid-row-start: 3;
-	display: flex;
-	gap: 24px;
-}
-
-.footer a {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-}
-
-.footer img {
-	flex-shrink: 0;
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-	a.primary:hover {
-		background: var(--button-primary-hover);
-		border-color: transparent;
-	}
-
-	a.secondary:hover {
-		background: var(--button-secondary-hover);
-		border-color: transparent;
-	}
-
-	.footer a:hover {
-		text-decoration: underline;
-		text-underline-offset: 4px;
-	}
-}
-
-@media (max-width: 600px) {
-	.page {
-		padding: 32px;
-		padding-bottom: 80px;
-	}
-
-	.main {
-		align-items: center;
-	}
-
-	.main ol {
-		text-align: center;
-	}
-
-	.ctas {
-		flex-direction: column;
-	}
-
-	.ctas a {
-		font-size: 14px;
-		height: 40px;
-		padding: 0 16px;
-	}
-
-	a.secondary {
-		min-width: auto;
-	}
-
-	.footer {
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: center;
-	}
-}
-
-@media (prefers-color-scheme: dark) {
-	.logo {
-		filter: invert();
+		--background: #1e1e1e;
+		--foreground: #eaeaea;
 	}
 }
 
 .page {
-	padding: 0px;
-	text-align: center;
+	background-color: #90ee90;
+	min-height: 100vh;
+	padding: 40px;
 }
 
-.main {
-	max-width: 400px;
-	width: 40rem;
-	margin: 0 auto;
+.box {
+	width: 100%;
+	max-width: 100%;
 	padding: 20px;
-	margin-top: 5rem;
-	border: 1px solid #ddd;
+	min-height: 50vh;
+	border: 1px solid rgba(0, 0, 0, 0.08);
 	border-radius: 8px;
-	background-color: #f9f9f9;
+	background-color: white;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.box_middle {
+	width: 70%;
+	margin-left: 5rem;
+	max-width: 100%;
+	padding: 20px;
+	min-height: 50vh;
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	border-radius: 8px;
+	background-color: white;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.box:hover,
+.box_middle:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.newBackground {
+	background-color: #e51b44;
+	color: white;
+}
+
+.tokenIcon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* This centers the logo horizontally */
+}
+
+
+.TopIcon {
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+	margin-left: 5rem;
+	border-radius: 50%;
+	/* Makes the logo circular */
+	overflow: hidden;
+	/* Ensures the image stays within the rounded border */
+	border: 2px solid rgba(255, 255, 255, 0.8);
+	/* Add a border color */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	/* Optional shadow for depth */
+	transition: transform 0.3s ease;
+	/* Smooth transition for the zoom effect */
+}
+
+.TopIcon:hover {
+	transform: scale(1.5);
+	/* Zoom effect on hover */
+}
+
+.bp1 {
+	color: white;
+	font-size: 1rem;
+	line-height: 1.5;
+	margin-bottom: 1.5rem;
+	margin-top: 3rem;
+}
+
+.sponsor {
+	justify-content: center;
+	align-content: center;
+	margin-left: 7rem;
 }
 
 .inputContainer {
@@ -178,50 +120,89 @@ a.secondary {
 	border-radius: 4px;
 	background-color: white;
 	color: black;
+	transition: border-color 0.2s;
+}
+
+.input:focus {
+	border-color: var(--button-primary);
 }
 
 .ctas {
 	display: flex;
-	justify-content: space-between;
 	justify-content: center;
+	gap: 16px;
 }
 
 .primary {
-	background-color: #4CAF50;
-	/* Green */
+	background-color: var(--button-primary);
 	color: white;
 	padding: 10px 20px;
+	margin-top: 1rem;
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
+	transition: background 0.3s, transform 0.2s;
+}
+
+.primary:hover {
+	background-color: var(--button-primary-hover);
+	transform: translateY(-2px);
+}
+
+.newBackground {
+	background-color: #e51b44;
+	color: white;
 }
 
 .secondary {
-	background-color: #008CBA;
-	/* Blue */
+	background-color: var(--button-secondary);
 	color: white;
 	padding: 10px 20px;
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
+	transition: background 0.3s, transform 0.2s;
+}
+
+.secondary:hover {
+	background-color: var(--button-secondary-hover);
+	transform: translateY(-2px);
 }
 
 .h1 {
-	display: flex;
-	justify-content: center;
-	margin-top: 10rem;
+	color: var(--foreground);
+	font-size: 1.5rem;
+	margin-top: 2rem;
 	color: black;
-	font-size: 25px;
 }
 
 .footer {
 	color: black;
-	font-size: 12px;
-	margin-bottom: 4rem;
+	font-size: 0.75rem;
+	margin-bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
 }
 
 .link {
-	justify-content: center;
+	color: var(--button-secondary);
 	cursor: pointer;
-	color: blue;
+	transition: color 0.3s;
+}
+
+.link:hover {
+	color: var(--button-primary);
+}
+
+.fontS {
+	font-size: 12px;
+	margin-top: 5rem;
+}
+
+.cap {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
 }
