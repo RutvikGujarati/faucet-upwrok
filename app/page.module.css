@@ -71,7 +71,9 @@
     align-items: center;
     margin: 0 auto; /* This centers the logo horizontally */
 }
-
+.para{
+	margin-top: 20px;
+}
 
 .TopIcon {
 	width: 50px;
