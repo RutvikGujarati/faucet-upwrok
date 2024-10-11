@@ -4,7 +4,7 @@ import { ethers } from 'ethers';
 import TokenFaucetABI from '../ABI.json'; // Adjust the path as needed
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap
 
-const TOKEN_FAUCET_ADDRESS = '0xB6E3482DD571968C3d1db12F03e5d8f439c0F0D6'; // Replace with your deployed contract address
+const TOKEN_FAUCET_ADDRESS = '0x3324783b06AB76bee687c91EbD89C9F4188c1EC6'; // Replace with your deployed contract address
 
 const OwnerPage = () => {
 	const [balance, setBalance] = useState(0);

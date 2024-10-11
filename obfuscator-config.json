@@ -1,0 +1,11 @@
+{
+    "compact": true,
+    "controlFlowFlattening": true,
+    "debugProtection": true,
+    "debugProtectionInterval": 4000, 
+    "disableConsoleOutput": true,
+    "identifierNamesGenerator": "hexadecimal",
+    "numbersToExpressions": true,
+    "selfDefending": true,
+    "simplified": true
+}
