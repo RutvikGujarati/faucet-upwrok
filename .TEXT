@@ -1,0 +1,2 @@
+{		"postbuild": "javascript-obfuscator .next --output build --config obfuscator-config.json"
+}
